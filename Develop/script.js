@@ -1,36 +1,52 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-function generatePassword() {
-  var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXZ"
-  var lowercaseABC = "abcdefghijklmnopqrstuvwxyz"
-  var specialSymbols = "!@#$%^&*()_+="
-  var numeric = "0123456789"
-  var multiSelect = [];
+var password = document.querySelector("#password");
 
-  if (keyLength, 8 || keyLength > 128) {
-    alert("Your password does not meet the criteria");
-    var keyLength = prompt("Password must be between 8 and 128 characters.");
+//Variables
+  var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
+  var lowercaseABC = "abcdefghijklmnopqrstuvwxyz";
+  var specialSymbols = "!@#$%^&*()_+=";
+  var numeric = "0123456789";
+  var multiSelect = [];
+  var optionVariable = "";
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+//Function that generates a random password
+function writePassword()
+
+//Password Criteria
+var uppercaseLetter = confirm ("Would you like your password to include uppercase letters?");
+var lowercaseLetter  = confirm ("Would you like your password to include lowercase letters?");
+var specialChar = confirm ("Would you like your password to include special characters?");
+var number = confirm ("Would you like your password to include numbers?");
+var passwordLength = prompt ("How long would you like your password? Choose between 8 to 128 characters");
+
+//Function for the length of the password
+  if (PasswordLength, 8 || PasswordLength > 128) {
+    return("Your password does not meet the criteria");
+    var passwordLength = prompt("Password must be between 8 and 128 characters.");
   }
 
   if (uppercaseABC === false && lowercaseABC === false && specialSymbols === false && numeric === false) {
-    return "Your password does not mee the criteria";
+    return "Your password does not meet the criteria";
+    var uppercaseLetter = confirm ("Would you like your password to include uppercase letters?");
+var lowercaseLetter  = confirm ("Would you like your password to include lowercase letters?");
+var specialChar = confirm ("Would you like your password to include special characters?");
+var number = confirm ("Would you like your password to include numbers?");
   };
 }
 
-var uppercaseABC = confirm("Your password should have an uppercase letter")
-var lowercaseABC = confirm("Your password should have an lowercase letter")
-var specialSymbols = confirm("Your password should have a symbol")
-var numeric = confirm("Your password should have a number")
-
-
-if (lowercaseABC) { multiSelect += lowercase }
+if (lowercaseABC) { multiSelect += lowercase; }
 if (uppercaseABC) { multiSelect += uppercaseABC; }
 if (number) { multiSelect += numbers; }
 if (specialSymbols) { multiSelect += specialSymbols; }
 
 let finalpassword = ""
-for (let i = 0; i < keyLength; i++) {
-  let rng = [Math.floor(Math.random() * multiSelect.length)];
+for (let i = 0; i < passwordLength; i++) {
+  let rng = multiSelect.charat[Math.floor(Math.random() * multiSelect.length)];
   finalpassword = finalpassword + multiSelect[rng];
   return finalpassword;
 };
@@ -44,5 +60,3 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("onclick", writePassword);
