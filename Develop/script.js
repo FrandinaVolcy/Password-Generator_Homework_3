@@ -10,7 +10,7 @@ var numeric = "0123456789"
 var multiSelect = "";
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 
 //Function that generates a random password
 function generatePassword() {
