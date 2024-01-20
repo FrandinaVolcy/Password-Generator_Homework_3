@@ -16,10 +16,10 @@ generateBtn.addEventListener("click", generatePassword);
 function generatePassword() {
 
   //Password Criteria
-  var uppercaseABC = confirm("Your password should have an uppercase letter")
-  var lowercaseABC = confirm("Your password should have an lowercase letter")
-  var specialSymbols = confirm("Your password should have a symbol")
-  var numbers = confirm("Your password should have a number")
+  var uppercaseLetter = confirm("Your password should have an uppercase letter")
+  var lowercaseLetter = confirm("Your password should have an lowercase letter")
+  var specialChar = confirm("Your password should have a symbol")
+  var numberOptions = confirm("Your password should have a number")
   var keyLength = prompt("Password must be between 8 and 128 characters.");
 
   //Length Criteria
@@ -27,15 +27,16 @@ function generatePassword() {
     alert("Your password length does not meet the criteria");
     return;
   }
-  if (!uppercaseABC === false && lowercaseABC === false && specialSymbols === false && numbers === false) {
+  if (uppercaseABC === false && lowercaseABC === false && specialSymbols === false && numbers === false) {
     alert("Your password does not meet the criteria");
     return;
   }
-  if (lowercaseABC) { multiSelect += lowercaseABC; }
-  if (uppercaseABC) { multiSelect += uppercaseABC; }
-  if (numbers) { multiSelect += numbers; }
-  if (specialSymbols) { multiSelect += specialSymbols; }
+  if (lowercaseLetter) { multiSelect += lowercaseABC; }
+  if (uppercaseLetter) { multiSelect += uppercaseABC; }
+  if (numberOptions) { multiSelect += numbers; }
+  if (specialChar) { multiSelect += specialSymbols; }
 
+  //Final Password
   let finalpassword = "";
   for (let i = 0; i < keyLength; i++) {
     finalpassword += multiSelect.charAt(Math.floor(Math.random() * multiSelect.length));
