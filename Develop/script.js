@@ -16,11 +16,11 @@ generateBtn.addEventListener("click", generatePassword);
 function generatePassword() {
 
   //Password Criteria
-  var uppercaseLetter = confirm("Your password should have an uppercase letter")
-  var lowercaseLetter = confirm("Your password should have an lowercase letter")
-  var specialChar = confirm("Your password should have a symbol")
-  var numberOptions = confirm("Your password should have a number")
-  var keyLength = prompt("Password must be between 8 and 128 characters.");
+  var uppercaseLetter = confirm ("Your password should have an uppercase letter")
+  var lowercaseLetter = confirm ("Your password should have a lowercase letter")
+  var specialChar = confirm ("Your password should have a symbol")
+  var numberOptions = confirm ("Your password should have a number")
+  var keyLength = prompt ("Password must be between 8 and 128 characters.");
 
   //Length Criteria
   if (!keyLength || keyLength < 8 || keyLength > 128) {
