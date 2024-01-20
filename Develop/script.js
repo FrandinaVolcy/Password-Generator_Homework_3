@@ -6,7 +6,7 @@ var passwordText = document.querySelector("#password");
 var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXZ"
 var lowercaseABC = "abcdefghijklmnopqrstuvwxyz"
 var specialSymbols = "!@#$%^&*()_+="
-var numeric = "0123456789"
+var numbers = "0123456789"
 var multiSelect = "";
 
 // Add event listener to generate button
@@ -19,7 +19,7 @@ function generatePassword() {
   var uppercaseABC = confirm("Your password should have an uppercase letter")
   var lowercaseABC = confirm("Your password should have an lowercase letter")
   var specialSymbols = confirm("Your password should have a symbol")
-  var numeric = confirm("Your password should have a number")
+  var numbers = confirm("Your password should have a number")
   var keyLength = prompt("Password must be between 8 and 128 characters.");
 
   //Length Criteria
@@ -27,13 +27,13 @@ function generatePassword() {
     alert("Your password length does not meet the criteria");
     return;
   }
-  if (!uppercaseABC === false && lowercaseABC === false && specialSymbols === false && numeric === false) {
+  if (!uppercaseABC === false && lowercaseABC === false && specialSymbols === false && numbers === false) {
     alert("Your password does not meet the criteria");
     return;
   }
   if (lowercaseABC) { multiSelect += lowercaseABC; }
   if (uppercaseABC) { multiSelect += uppercaseABC; }
-  if (number) { multiSelect += numbers; }
+  if (numbers) { multiSelect += numbers; }
   if (specialSymbols) { multiSelect += specialSymbols; }
 
   let finalpassword = "";
