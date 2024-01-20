@@ -1,5 +1,3 @@
-# Password-Generator_Homework_3
-<<<<<<< HEAD
 # 03 JavaScript: Password Generator
 
 ## Your Task
